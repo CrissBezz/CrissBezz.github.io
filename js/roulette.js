@@ -36,15 +36,33 @@ var cheat_meals = [
   },
 ];
 
-var $rouletteContainer = $(".roulette-container");
-var $roulette = $(".roulette");
-var $linkTo = $(".link-to");
+  const rouletteContainer = document.querySelector(".roulette-container");
+  const roulette = document.querySelector(".roulette");
+  const linkTo = document.querySelector(".link-to");
+  const spin = document.querySelector(".spin");
+  spin.addEventListener("click", () => {
+    rouletteContainer.classList.remove("tada");
+    const total = cheat_meals.length;
+    const selected = Math.floor(Math.random() * total);
+    for (let i = 0; i <= total; i++) {
+      setTimeout(
+        ((i) => {
+          return () => {
+            roulette.innerText = cheat_meals[i % total].Name;
+            linkTo.href = cheat_meals[i % total].Url;
+            if (i === selected) {
+              roulette.classList.add("tada");
+            }
+          };
+        })(i),
+        i * 100
+      );
+      if (i === selected) {
+        break;
+      }
+    }
+  });
 
-$(".spin").on("click", function () {
-  $rouletteContainer.removeClass("tada").animate({ "font-size": "16px" }, 0);
-  var total = cheat_meals.length,
-    selected = Math.floor(Math.random() * total * 5),
-    i = 0;
 
   for (i = 0; i <= total * 5; i++) {
     setTimeout(
