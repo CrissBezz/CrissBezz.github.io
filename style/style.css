@@ -1,9 +1,9 @@
 /* VARIABLES */
 :root {
-  --pink: #fc60a7;
-  --light-blue: #00f3ff;
-  --yellow: #fbff21;
-  --white: #ffffff;
+  --pink: #76b3f8;
+  --light-blue: #a200ff;
+  --yellow: #baf714;
+  --white: #f307d4;
 }
 
 /*  RESET
@@ -96,7 +96,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 120%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -115,7 +115,7 @@ section {
   display: block;
 }
 body {
-  line-height: 1;
+  line-height: 0.5;
 }
 ol,
 ul {
@@ -213,6 +213,7 @@ table {
 .tada {
   -webkit-animation-name: tada;
   animation-name: tada;
+  animation-duration:1s;
 }
 
 @-webkit-keyframes bounceIn {
@@ -337,20 +338,20 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* translate sposta l'elemento tra l'asse delle x e y. -50 sulle y spostalo del 50% in alto della sua altezz*/
   text-align: center;
 }
 
 h1 {
-  font-family: "Bangers", cursive;
-  font-size: 200%;
+  font-family: "Lilita One", cursive;
+  font-size: 300%;
   margin-bottom: 20px;
   color: var(--light-blue);
 }
 
 button,
 .roulette {
-  font-family: "Fredoka One", cursive;
+  font-family: "Luckiest Guy", cursive;
 }
 
 .roulette {
